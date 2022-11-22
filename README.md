@@ -1,4 +1,4 @@
-Hacking Orion SC002AH IP camera
+Hacking Orion SC002HA IP camera
 ===============================
 
 So I decided to buy some cheap IP cameras from Bunnings here in Australia. They only cost A$47, so it's a bargain!
