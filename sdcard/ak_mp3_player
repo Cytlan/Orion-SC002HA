@@ -1,0 +1,24 @@
+#!/bin/sh
+
+# This file is run by the updater. We can do anything we want here, and just kill the update script.
+# It should be placed in the root directory of yoru SD card.
+
+# Reset root password
+passwd << EOF
+asdqwe
+asdqwe
+EOF
+
+# Start FTP
+/usr/bin/tcpsvd 0 21 ftpd -w / -t 600 &
+
+# Start telnet
+/usr/sbin/telnetd &
+
+# Start the regular camera controller
+/usr/bin/anyka_ipc &
+
+# Kill the updater
+killall -9 update.sh
+
+exit 0
