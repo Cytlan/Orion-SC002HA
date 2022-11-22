@@ -9,6 +9,12 @@ The camera is made by Anyka and runs a package labelled TUYA_AK3918EV330. Appare
 
 With the price being only A$47, I could easy afford to buy an extra one to sacrefice. It contains a 8MB SPI flash chip, and dumping that revealed most of the camera's secrets.
 
+How to use
+----------
+If you just can telnet access **now**, simply place the files in the `sdcard/` directory in this repository on any vFAT formatted SD card, shove it into your camera, reboot it, and access it using `telnet [IP]` with username `root` and password `asdqwe`.
+
+Otherwise, edit the `ak_mp3_player` script to do whatever else you need it to do.
+
 Exploit
 -------
 This exploit uses the SD card update mechanism to push a fake update, which in turn gives us access to run arbitrary shell scripts on the camera.
