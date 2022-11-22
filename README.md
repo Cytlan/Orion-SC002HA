@@ -15,6 +15,10 @@ If you just want telnet access *now*, simply place the files in the `sdcard/` di
 
 Otherwise, edit the `ak_mp3_player` script to do whatever else you need it to do.
 
+Cross-compiling
+---------------
+There's a `.config` file in `crosstool-ng` that you can use to build a toolchain for cross-compiling, allowing you to compile C programs to run on the device.
+
 Exploit
 -------
 This exploit uses the SD card update mechanism to push a fake update, which in turn gives us access to run arbitrary shell scripts on the camera.
