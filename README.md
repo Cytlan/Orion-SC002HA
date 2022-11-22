@@ -29,6 +29,8 @@ md5=
 
 The `bundle` field must match the package installed on the camera, and the version must be greater than the installed version. The `md5` field is simple an `md5sum` of the `.tar.gz` file before the footer was appended. The `.tar.gz` file must contain at least one update file, but it can simply be an empty file.
 
+(see `make_fake_update.sh` for more details on how the update file needs to look)
+
 If all of these contitions are met, the camera will attempt to execute a program from the SD card called `ak_mp3_player`. We can simply make this a shell script file, and we now have access to run any command we want!
 
 The `ak_mp3_player` script found in this repo just enables telnet, and boots the camera normally.
